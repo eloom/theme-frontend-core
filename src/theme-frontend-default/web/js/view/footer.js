@@ -1,0 +1,1 @@
+define(["jquery","uiComponent","domReady!"],function(a,b){return b.extend({defaults:{},initialize:function(){this._super();a("#back-top").hide();a(window).scroll(function(){100<a(this).scrollTop()?a("#back-top").fadeIn():a("#back-top").fadeOut()});a("#back-top").click(function(){a("body,html").animate({scrollTop:0},800);return!1})}})});

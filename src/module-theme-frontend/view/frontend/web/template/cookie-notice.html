@@ -1,0 +1,12 @@
+<!-- ko if: isVisible() -->
+<div class='wrapper'>
+	<div class='close'>
+		<span data-bind="click: consent">X</span>
+	</div>
+	<div class='content'>
+		<div class='description' data-bind="html: getText()"></div>
+		<a class='more' data-bind="i18n: 'Know more', href: getUrl()" target='_blank' ></a>
+		<a class='ok' data-bind="i18n: 'I understood', click: consent" target='_blank' ></a>
+	</div>
+</div>
+<!-- /ko -->

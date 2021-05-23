@@ -1,0 +1,2 @@
+define(["jquery","mageUtils","Magento_Ui/js/lib/core/storage/local","uiClass"],function(d,b,g,f){return f.extend({defaults:{ajaxSettings:{method:"POST",data:{namespace:"${ $.namespace }"}}},get:function(){return{}},set:function(a,c){a=a.replace(this.namespace+".","");var e={};b.nested(e,a,c);c=b.extend({url:this.saveUrl,data:{data:JSON.stringify(e)}},this.ajaxSettings);d.ajax(c)},remove:function(a){a=a.replace(this.namespace+".","");a=b.extend({url:this.deleteUrl,data:{data:a}},this.ajaxSettings);
+d.ajax(a)}})});

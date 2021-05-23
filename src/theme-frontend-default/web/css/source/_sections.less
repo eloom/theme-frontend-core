@@ -1,0 +1,74 @@
+//  Tabs controls
+@tab-control__font-size: 1.6rem;
+
+//@tab-control__font-weight: @font-weight__semibold;
+@tab-control__border-color: @color-black;
+@tab-control__background-color: transparent;
+//@tab-control__active__background-color: @color-black;
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+	.product.data.items {
+		.lib-data-accordion();
+		margin-bottom: @indent__base;
+
+		.item.title {
+			> .switch {
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
+//
+//  Mobile
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+	.product.data.items {
+		.lib-data-accordion();
+
+		.data.item {
+			display: block;
+		}
+
+		.item.title {
+			> .switch {
+				font-size: @tab-control__font-size;
+			}
+		}
+
+		> .item.content {
+			padding: 1rem 1.5rem 3rem;
+		}
+	}
+}
+
+//
+//  Desktop
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+	.product.data.items {
+		.lib-data-tabs();
+
+		.item.title {
+			> .switch {
+				border-top: 0;
+				border-right: 0;
+			}
+			&.active {
+				> .switch {
+					padding-bottom: 0;
+				}
+			}
+			&:first-child {
+				.switch {
+					border-left: 0;
+					padding-left: 0;
+				}
+			}
+		}
+	}
+}

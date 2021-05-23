@@ -1,0 +1,126 @@
+@font-family__base: 'Barlow Condensed', sans-serif;
+
+// Sizes
+@root__font-size: 62.5%; // Defines ratio between root font size and base font size, 1rem = 10px
+@font-size-ratio__base: 1.6; // Defines ratio of the root font-size to the base font-size
+@font-size-unit: rem; // The unit to which most typography values will be converted by default
+@font-size-unit-ratio: unit(@root__font-size * 16/100); // Ratio of the root font-size to the font-size unit
+@font-size-unit-convert: true; // Controls whether font-size values are converted to the specified font-size unit
+
+@font-size__base: unit(((@root__font-size / 100) * 16 * @font-size-ratio__base) / 10, @font-size-unit);
+@font-size__xl: @font-size__base * 1.5;
+@font-size__l: @font-size__base * 1.15;
+@font-size__s: @font-size__base * .85;
+@font-size__xs: @font-size__base * .75;
+
+//  Line heights
+@line-height__base: 1.428571429;
+@line-height__computed: floor(@font-size__base * @line-height__base);
+@line-height__xl: 1.7;
+@line-height__l: 1.5;
+@line-height__s: 1.33;
+
+//
+//  Indents
+//  ---------------------------------------------
+@indent__base: @line-height__computed; // 20px
+@indent__xl: @indent__base * 2; // 40px
+@indent__l: @indent__base * 1.5; // 30px
+@indent__m: @indent__base * 1.25; // 25px
+@indent__s: @indent__base / 2; // 10px
+@indent__xs: @indent__base / 4; // 5px
+
+//
+//  Headings
+//  ---------------------------------------------
+@heading__margin-bottom__base: 2rem;
+
+@h1__font-size: ceil((@font-size__base * 1.85));
+@h2__font-size: ceil((@font-size__base * 1.50));
+@h3__font-size: ceil((@font-size__base * 1.28));
+@h4__font-size: @font-size__base;
+@h5__font-size: ceil((@font-size__base * .85));
+@h6__font-size: ceil((@font-size__base * .7));
+
+//
+//  Lists
+//  ---------------------------------------------
+@dt__font-weight: @font-weight__heavier;
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+	.lib-font-face(
+		@family-name: 'Barlow Condensed',
+		@font-path: '@{baseDir}fonts/barlow/thin/barlow-condensed-thin',
+		@font-weight: 100,
+		@font-style: normal,
+		@font-display: swap
+	);
+	.lib-font-face(
+		@family-name: 'Barlow Condensed',
+		@font-path: '@{baseDir}fonts/barlow/extralight/barlow-condensed-extralight',
+		@font-weight: 200,
+		@font-style: normal,
+		@font-display: swap
+	);
+	.lib-font-face(
+		@family-name: 'Barlow Condensed',
+		@font-path: '@{baseDir}fonts/barlow/light/barlow-condensed-light',
+		@font-weight: 300,
+		@font-style: normal,
+		@font-display: swap
+	);
+	.lib-font-face(
+		@family-name: 'Barlow Condensed',
+		@font-path: '@{baseDir}fonts/barlow/regular/barlow-condensed-regular',
+		@font-weight: 400,
+		@font-style: normal
+	);
+
+	.lib-font-face(
+		@family-name: 'Barlow Condensed',
+		@font-path: '@{baseDir}fonts/barlow/medium/barlow-condensed-medium',
+		@font-weight: 500,
+		@font-style: normal,
+		@font-display: swap
+	);
+
+	.lib-font-face(
+		@family-name: 'Barlow Condensed',
+		@font-path: '@{baseDir}fonts/barlow/semibold/barlow-condensed-semibold',
+		@font-weight: 600,
+		@font-style: normal,
+		@font-display: swap
+	);
+	.lib-font-face(
+		@family-name: 'Barlow Condensed',
+		@font-path: '@{baseDir}fonts/barlow/bold/barlow-condensed-bold',
+		@font-weight: 700,
+		@font-style: normal,
+		@font-display: swap
+	);
+
+	h1,h2,h3,h4,h5,h6 {
+		margin-bottom: @heading__margin-bottom__base;
+	}
+
+	b,
+	strong {
+		.lib-css(font-weight, @font-weight__semibold);
+	}
+
+	.items {
+		.lib-list-reset-styles();
+	}
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+}

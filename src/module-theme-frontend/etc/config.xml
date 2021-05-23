@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+	<default>
+		<eloom_themefrontend>
+			<cookie_notice>
+				<active>1</active>
+				<text>Utilizamos cookies próprios e de terceiros para melhorar sua experiência e nossos serviços, analisando a navegação de nosso site. Ao continuar a navegação, consideramos que você aceita a sua utilização.</text>
+				<url>/termos-de-uso</url>
+			</cookie_notice>
+			<installments>
+				<cc_active>1</cc_active>
+				<cc_text><![CDATA[ou %1x de <span class="price">%2</span> s/juros no cartão]]></cc_text>
+				<cc_min_installment>15.00</cc_min_installment>
+				<cc_installmens_without_interest>3</cc_installmens_without_interest>
+				<voucher_active>1</voucher_active>
+				<voucher_text><![CDATA[ou <span class="price">%1</span> com %2% off no boleto]]></voucher_text>
+				<voucher_discount>5</voucher_discount>
+			</installments>
+		</eloom_themefrontend>
+	</default>
+</config>

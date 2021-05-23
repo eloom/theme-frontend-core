@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	
+	<preference for="Magento\LayeredNavigation\Block\Navigation\FilterRenderer"
+	            type="Eloom\ThemeFrontend\Block\Navigation\FilterRenderer"/>
+	
+	<type name="Magento\Catalog\Block\Product\AbstractProduct">
+		<plugin name="badges_product" type="Eloom\ThemeFrontend\Plugin\Catalog\ProductPlugin"/>
+	</type>
+	<type name="Magento\Catalog\Block\Product\Image">
+		<plugin name="badges_label" type="Eloom\ThemeFrontend\Plugin\Catalog\Product\ImagePlugin"/>
+	</type>
+	<type name="Magento\Swatches\Block\Product\Renderer\Listing\Configurable">
+		<plugin name="product_listing_hover_image"
+		        type="Eloom\ThemeFrontend\Plugin\Catalog\Product\Renderer\Listing\Configurable"/>
+	</type>
+	<type name="Magento\Swatches\Helper\Data">
+		<plugin name="media_gallery_hover_image" type="Eloom\ThemeFrontend\Plugin\Catalog\Product\Swatches"/>
+	</type>
+	<type name="Eloom\ThemeFrontend\Block\Navigation\FilterRenderer">
+		<plugin name="swatches_layered_renderer" type="Magento\Swatches\Model\Plugin\FilterRenderer" sortOrder="1"/>
+	</type>
+</config>

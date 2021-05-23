@@ -1,0 +1,1 @@
+define(["underscore","jquery","mageUtils","uiElement"],function(b,c,d,a){return a.extend({defaults:{listens:{}},initialize:function(){this._super();console.log(this);return this},initObservable:function(){this._super();return this}})});

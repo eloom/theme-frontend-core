@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<include xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_include.xsd">
+	
+	<field id="configuration_details" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1"
+	       showInStore="0">
+		<label>Configuration Details</label>
+		<comment>https://docs.eloom.dev/theme/installments</comment>
+		<frontend_model>Eloom\ThemeFrontend\Block\Adminhtml\Config\Fieldset\Installments\Hint</frontend_model>
+	</field>
+	
+	<field id="cc" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1"
+	       showInStore="0">
+		<label><![CDATA[CC Settings]]></label>
+		<frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
+	</field>
+	<field id="cc_active" translate="label" type="select" sortOrder="11" showInDefault="1" showInWebsite="1"
+	       showInStore="0">
+		<label>Enabled</label>
+		<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+	</field>
+	<field id="cc_text" translate="label" type="text" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="0">
+		<label>Text</label>
+		<depends>
+			<field id="cc_active">1</field>
+		</depends>
+		<validate>required-entry</validate>
+	</field>
+	<field id="cc_min_installment" translate="label" type="text" sortOrder="13" showInDefault="1" showInWebsite="1"
+	       showInStore="0">
+		<label><![CDATA[Min installment amount]]></label>
+		<depends>
+			<field id="cc_active">1</field>
+		</depends>
+		<validate>required-entry validate-number</validate>
+	</field>
+	<field id="cc_installmens_without_interest" translate="label" type="text" sortOrder="14" showInDefault="1"
+	       showInWebsite="1" showInStore="0">
+		<label><![CDATA[Installments without interest]]></label>
+		<depends>
+			<field id="cc_active">1</field>
+		</depends>
+		<validate>required-entry validate-number</validate>
+	</field>
+	
+	<field id="voucher" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1"
+	       showInStore="0">
+		<label><![CDATA[Voucher Settings]]></label>
+		<frontend_model>Magento\Config\Block\System\Config\Form\Field\Heading</frontend_model>
+	</field>
+	<field id="voucher_active" translate="label" type="select" sortOrder="21" showInDefault="1" showInWebsite="1"
+	       showInStore="0">
+		<label>Active</label>
+		<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+	</field>
+	<field id="voucher_text" translate="label" type="text" sortOrder="22" showInDefault="1" showInWebsite="1"
+	       showInStore="0">
+		<label>Text</label>
+		<depends>
+			<field id="voucher_active">1</field>
+		</depends>
+		<validate>required-entry</validate>
+	</field>
+	<field id="voucher_discount" translate="label" type="text" sortOrder="23" showInDefault="1" showInWebsite="1"
+	       showInStore="0">
+		<label><![CDATA[Discount]]></label>
+		<depends>
+			<field id="voucher_active">1</field>
+		</depends>
+		<validate>required-entry validate-number</validate>
+	</field>
+</include>

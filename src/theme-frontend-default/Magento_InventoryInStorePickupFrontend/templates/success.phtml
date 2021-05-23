@@ -1,0 +1,28 @@
+<?php /** @var $block \Magento\Checkout\Block\Onepage\Success */ ?>
+<div class="checkout-success">
+	<figure class="icon-checked"></figure>
+	<h1><?= __('Thank you for your purchase!')?></h1>
+
+	<div class="order-details">
+		<?php if ($block->getOrderId()): ?>
+			<?php if ($block->getCanViewOrder()) : ?>
+				<p class="order"><?= __('Your order number is: %1.', sprintf('<a href="%s" class="order-number"><strong>%s</strong></a>', $block->escapeHtml($block->getViewOrderUrl()), $block->escapeHtml($block->getOrderId()))) ?></p>
+			<?php else : ?>
+				<p class="order"><?= __('Your order # is: <span>%1</span>.', $block->escapeHtml($block->getOrderId())) ?></p>
+			<?php endif; ?>
+			<?php if ($block->getIsOrderStorePickup()->execute()) : ?>
+				<p><?= $block->escapeHtml(__('We\'ll email you an order and pick-up confirmation with details.')) ?></p>
+			<?php else : ?>
+				<p><?= $block->escapeHtml(__('We\'ll email you an order confirmation with details and tracking info.')) ?></p>
+			<?php endif; ?>
+		<?php endif; ?>
+
+		<?= $block->getAdditionalInfoHtml() ?>
+	</div>
+
+	<div class="actions-toolbar">
+		<div class="primary">
+			<a class="action primary continue" href="<?= $block->getContinueUrl() ?>"><span><?= __('Continue Shopping') ?></span></a>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,27 @@
+<div class="field field-postcode required">
+	<div class="control">
+		<input type="text"
+		       class="input-text"
+		       id="postcode"
+		       name="postcode"
+		       data-bind="value: postCode,
+		                  attr: {'placeholder': $t('Zip/Post Code'), 'data-validate': JSON.stringify({'required':true})}"/>
+	</div>
+
+	<ul data-bind="foreach: { data: carriers, as: 'carrier' }">
+		<li data-bind="foreach: { data: items, as: 'item' }">
+			<span class="title" data-bind="text: item.methodTitle"></span>
+			<span class="price" data-bind="html: item.price"></span>
+			<span class="message" data-bind="text: item.message"></span>
+		</li>
+	</ul>
+
+	<button type="button" class="action" data-bind="click: estimateShipping">
+      <span><span data-bind="i18n: 'Calculate'"></span></span>
+	</button>
+	<!-- ko if: isGeolocationEnabled() -->
+	<a class="action location" data-bind="click: getLocation">
+		<span data-bind="i18n: 'Use my location'"></span>
+	</a>
+	<!-- /ko -->
+</div>

@@ -1,0 +1,22 @@
+<?php
+/** @var $block Eloom\ThemeFrontend\Block\Installments\Product */
+$productId = $block->getProduct()->getId();
+?>
+
+<div id="eloom-installments-container">
+</div>
+
+<span data-badge-onsale='product-id-<?= $block->escapeHtml($productId) ?>'></span>
+
+<script type="text/x-magento-init">
+{
+		"[data-badge-onsale=product-id-<?= $block->escapeHtml($productId) ?>]": {
+          "Eloom_ThemeFrontend/js/catalog/badges/onsale/product": {}
+    },
+    "#eloom-installments-container": {
+        "Eloom_ThemeFrontend/js/catalog/badges/installments/product": {
+            "installments": <?= $block->getInstallmentsJsonConfig() ?>
+        }
+    }
+}
+</script>

@@ -1,0 +1,25 @@
+<?php
+/** @var $block Eloom\ThemeFrontend\Block\Catalog\Product\ProductList\Item\Badges */
+$productId = $block->getProduct()->getId();
+?>
+<span data-badge-installments='product-id-<?= $block->escapeHtml($productId) ?>'></span>
+<span data-badge-onsale='product-id-<?= $block->escapeHtml($productId) ?>'></span>
+<span data-badge-dates='product-id-<?= $block->escapeHtml($productId) ?>'></span>
+
+<script type="text/x-magento-init">
+  {
+      "[data-badge-onsale=product-id-<?= $block->escapeHtml($productId) ?>]": {
+          "Eloom_ThemeFrontend/js/catalog/badges/onsale/product-list": {}
+      },
+      "[data-badge-installments=product-id-<?= $block->escapeHtml($productId) ?>]": {
+          "Eloom_ThemeFrontend/js/catalog/badges/installments/product-list": {
+            "installments": <?= $block->getInstallmentsJsonConfig() ?>
+          }
+      },
+      "[data-badge-dates=product-id-<?= $block->escapeHtml($productId) ?>]": {
+          "Eloom_ThemeFrontend/js/catalog/badges/date/product-list": {
+            "config": <?= $block->getDateJsonConfig() ?>
+          }
+      }
+  }
+</script>
