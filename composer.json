@@ -1,6 +1,6 @@
 {
   "name": "eloom/theme-frontend",
-  "description": "Temas para Magento 2 (Open Source)",
+  "description": "Temas para Magento 2",
   "homepage": "https://www.eloom.com.br/themes",
   "keywords": [
     "magento",
@@ -15,17 +15,17 @@
   ],
   "authors": [
     {
-      "name": "eloom.dev",
-      "email": "comunidade@eloom.dev"
+      "name": "eloom",
+      "email": "contato@eloom.com.br"
     }
   ],
   "support": {
-    "email": "comunidade@eloom.dev"
+    "email": "contato@eloom.com.br"
   },
   "require": {
     "php": "~7.3|~7.4",
     "magento/framework": "103.0.*",
-    "eloom/module-checkout": "dev-master"
+    "eloom/module-checkout": "dev-main"
   },
   "license": [
     "OSL-3.0",
