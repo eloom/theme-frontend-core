@@ -79,6 +79,13 @@
 	}
 
 	.checkout-index-index {
+		.logo {
+			left: 0;
+			margin-left: 0;
+			position: relative;
+			transform: unset;
+		}
+
 		.nav-sections,
 		.nav-toggle {
 			display: none;
@@ -174,12 +181,6 @@
 //  _____________________________________________
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
 	.checkout-index-index {
-		.logo {
-			left: 0;
-			margin-left: 0;
-			position: relative;
-		}
-
 		.checkout-ssl {
 			margin-right: 1.5rem;
 		}

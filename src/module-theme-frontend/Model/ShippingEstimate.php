@@ -98,20 +98,27 @@ class ShippingEstimate implements ShippingEstimateInterface {
 			->getShippingRatesCollection();
 		
 		$carriers = [];
+		$items = [];
 		foreach ($rates as $rate) {
-			$message = $rate->getErrorMessage() ?? '';
+			$carriers[$rate->getCarrier()] = [
+				'carrierCode' => $rate->getCarrier(),
+				'carrierTitle' => $rate->getCarrierTitle()
+			];
+			
 			$item = [
 				'methodCode' => $rate->getMethod(),
 				'methodTitle' => $rate->getMethodTitle(),
 				'price' => $this->pricingHelper->currency($rate->getPrice()),
-				'message' => $message
+				'message' => $rate->getErrorMessage() ?? ''
 			];
-			$carriers[$rate->getCarrier()] = [
-				'carrierCode' => $rate->getCarrier(),
-				'carrierTitle' => $rate->getCarrierTitle(),
-				'items' => []
-			];
-			$carriers[$rate->getCarrier()]['items'][] = $item;
+			
+			$items[$rate->getCarrier()][$rate->getMethod()] = $item;
+		}
+		
+		foreach ($items as $key => $value) {
+			foreach ($value as $item) {
+				$carriers[$key]['items'][] = $item;
+			}
 		}
 		
 		return $this->serializer->serialize(['data' => $carriers]);

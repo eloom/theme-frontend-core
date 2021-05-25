@@ -9,11 +9,13 @@
 	</div>
 
 	<ul data-bind="foreach: { data: carriers, as: 'carrier' }">
-		<li data-bind="foreach: { data: items, as: 'item' }">
+		<!-- ko foreach: { data: carrier.items, as: 'item' } -->
+		<li>
 			<span class="title" data-bind="text: item.methodTitle"></span>
 			<span class="price" data-bind="html: item.price"></span>
 			<span class="message" data-bind="text: item.message"></span>
 		</li>
+		<!-- /ko -->
 	</ul>
 
 	<button type="button" class="action" data-bind="click: estimateShipping">
