@@ -357,16 +357,17 @@
 	display: inline-block;
 	float: right;
 	position: relative;
+	margin: 0 1rem;
 
 	.promotions {
 		a {
-			/*
 			.lib-icon-font(
-				@_icon-font-content: @icon-bell, //FIXME: criar o ícone
+				@_icon-font-content: @icon-bell,
 				@_icon-font-text-hide: true,
-				@_icon-font-size: 20px
+				@_icon-font-size: 2.4rem,
+				@_icon-font-line-height: 2.4rem
 			);
-			*/
+
 			> span {
 				background: @color-gray20;
 				color: @color-white;
@@ -519,6 +520,21 @@
 			.masonry-item {
 				width: calc(100% / 2 * 1);
 			}
+		}
+	}
+
+	.promotions-wrapper {
+		float: none;
+		position: absolute;
+		margin: 0 1rem;
+		left: 4rem;
+		top: 1.2rem;
+
+		.promotions-list-wrapper {
+			left: 0;
+			right: 0;
+			width: 100%;
+			min-width: 300px;
 		}
 	}
 }
