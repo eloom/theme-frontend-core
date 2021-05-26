@@ -437,6 +437,17 @@
 
 //
 //  Mobile
+//
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__s) {
+	.logo {
+		img {
+			height: 2.5rem;
+		}
+	}
+}
+
+//
+//  Mobile
 //  _____________________________________________
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
 	.page-header {
