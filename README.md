@@ -4,7 +4,7 @@ O módulo Temas para o Magento 2 é de código aberto e está disponível no [Gi
 
 !!! Recomendamos que você teste as soluções em um servidor de teste antes de instalá-lo em seu servidor de produção.
 
-Acesse a página do projeto [Temas para Magento 2](https://www.eloom.com.br/themes) e tenha uma visão completa de todos os recursos que nossa integração oferece.
+Acesse a página do projeto [Temas para Magento 2](https://eloom.tech/themes) e tenha uma visão completa de todos os recursos que nossa integração oferece.
 
 ## Requisitos Técnicos
 
@@ -24,12 +24,12 @@ Acesse a página do projeto [Temas para Magento 2](https://www.eloom.com.br/them
 
 ## Guia de instalação
 
-Consulte a seção [Instalando o módulo](https://docs.eloom.com.br/pt/theme#instalando-o-modulo) dos Temas no Magento 2.
+Consulte a seção [Instalando o módulo](https://docs.eloom.tech/pt/theme#instalando-o-modulo) dos Temas no Magento 2.
 
 ## Links
 
-* [Web site](https://www.eloom.com.br/correios-frete)
-* [Documentação](https://docs.eloom.com.br/correios-frete)
-* [Issue tracker](https://github.com/eloom/module-correios-frete/issues)
-* [Composer](https://app.repman.io/organization/eloom/package/81520e5c-adab-4769-8430-f6fb167e41bd/details)
-* [Código fonte](https://github.com/eloom/module-correios-frete)
+* [Web site](https://eloom.tech/theme)
+* [Documentação](https://docs.eloom.tech/theme)
+* [Issue tracker](https://github.com/eloom/theme-frontend/issues)
+* [Composer](https://app.repman.io/organization/eloom/package/41b6f90f-96ca-4ef7-a674-b7815cce5fa7/details)
+* [Código fonte](https://github.com/eloom/theme-frontend)
