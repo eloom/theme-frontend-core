@@ -1,4 +1,4 @@
-.loader-ellips {
+.loader-spinners {
 	font-size: 20px;
 	position: relative;
 	width: 64px;
@@ -6,7 +6,7 @@
 	margin: 10px auto;
 }
 
-.loader-ellips__dot {
+.loader-spinners__child {
 	display: block;
 	width: 12px;
 	height: 12px;
@@ -18,12 +18,12 @@
 	animation-iteration-count: infinite;
 }
 
-.loader-ellips__dot:nth-child(1),
-.loader-ellips__dot:nth-child(2) {
+.loader-spinners__child:nth-child(1),
+.loader-spinners__child:nth-child(2) {
 	left: 0;
 }
-.loader-ellips__dot:nth-child(3) { left: 1.5em; }
-.loader-ellips__dot:nth-child(4) { left: 3em; }
+.loader-spinners__child:nth-child(3) { left: 1.5em; }
+.loader-spinners__child:nth-child(4) { left: 3em; }
 
 @keyframes reveal {
 	from { transform: scale(0.001); }
@@ -34,16 +34,16 @@
 	to { transform: translateX(1.5em) }
 }
 
-.loader-ellips__dot:nth-child(1) {
+.loader-spinners__child:nth-child(1) {
 	animation-name: reveal;
 }
 
-.loader-ellips__dot:nth-child(2),
-.loader-ellips__dot:nth-child(3) {
+.loader-spinners__child:nth-child(2),
+.loader-spinners__child:nth-child(3) {
 	animation-name: slide;
 }
 
-.loader-ellips__dot:nth-child(4) {
+.loader-spinners__child:nth-child(4) {
 	animation-name: reveal;
 	animation-direction: reverse;
 }
