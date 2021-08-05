@@ -4,7 +4,7 @@ O módulo Temas para o Magento 2 é de código aberto e está disponível no [Gi
 
 !!! Recomendamos que você teste as soluções em um servidor de teste antes de instalá-lo em seu servidor de produção.
 
-Acesse a página do projeto [Temas para Magento 2](https://eloom.tech/themes) e tenha uma visão completa de todos os recursos que nossa integração oferece.
+Acesse a página do projeto [Temas para Magento 2](https://eloom.tech/) e tenha uma visão completa de todos os recursos que nossa integração oferece.
 
 ## Requisitos Técnicos
 
@@ -28,7 +28,7 @@ Consulte a seção [Instalando o módulo](https://docs.eloom.tech/pt/theme#insta
 
 ## Links
 
-* [Web site](https://eloom.tech/theme)
+* [Web site](https://eloom.tech/)
 * [Documentação](https://docs.eloom.tech/theme)
 * [Issue tracker](https://github.com/eloom/theme-frontend/issues)
 * [Composer](https://app.repman.io/organization/eloom/package/41b6f90f-96ca-4ef7-a674-b7815cce5fa7/details)
