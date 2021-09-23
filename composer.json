@@ -22,7 +22,7 @@
   "support": {
     "email": "contato@eloom.com.br"
   },
-  "minimum-stability": "dev",
+  "minimum-stability": "dev-main",
   "prefer-stable" : true,
   "require": {
     "php": "~7.3|~7.4",
