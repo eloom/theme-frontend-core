@@ -27,7 +27,7 @@
   "require": {
     "php": "~7.3|~7.4",
     "magento/framework": "103.0.*",
-    "eloom/module-checkout": "dev-main"
+    "eloom/module-checkout": "@dev"
   },
   "license": [
     "OSL-3.0",
