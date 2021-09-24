@@ -34,10 +34,10 @@
   ],
   "autoload": {
     "files": [
-      "src/module-theme-frontend/registration.php"
+      "src/theme-frontend/registration.php"
     ],
     "psr-4": {
-      "Eloom\\ThemeFrontend\\": "src/module-theme-frontend"
+      "Eloom\\ThemeFrontend\\": "src/theme-frontend"
     }
   }
 }
