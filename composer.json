@@ -1,7 +1,7 @@
 {
   "name": "eloom/theme-frontend",
-  "description": "Temas para Magento 2",
-  "homepage": "https://eloom.tech/",
+  "description": "Temas para Magento",
+  "homepage": "https://eloom.tech/themes/",
   "keywords": [
     "magento",
     "magento2",
@@ -9,7 +9,6 @@
     "ecommerce",
     "e-commerce",
     "shop",
-    "geolocation",
     "eloom",
     "themes"
   ],
@@ -35,8 +34,7 @@
   ],
   "autoload": {
     "files": [
-      "src/module-theme-frontend/registration.php",
-      "src/theme-frontend-default/registration.php"
+      "src/module-theme-frontend/registration.php"
     ],
     "psr-4": {
       "Eloom\\ThemeFrontend\\": "src/module-theme-frontend"
