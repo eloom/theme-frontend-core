@@ -25,7 +25,7 @@
 			       name="eloom_theme_preferences"
 			       template="Eloom_ThemeFrontend::theme/preferences.phtml"
 			       after="eloom_core_template"/>
-
+			
 			<block class="Eloom\ThemeFrontend\Block\Theme\CookieNotice"
 			       name="cookie.notice"
 			       template="Eloom_ThemeFrontend::theme/cookie-notice.phtml"/>
