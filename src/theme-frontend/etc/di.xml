@@ -13,6 +13,9 @@
 	
 	<preference for="Eloom\ThemeFrontend\Api\ShippingEstimateInterface"
 	            type="Eloom\ThemeFrontend\Model\ShippingEstimate"/>
-
 	
+	<type name="Magento\Framework\App\Http">
+		<plugin name="maintenance_page"
+		        type="Eloom\ThemeFrontend\App\MaintenanceHandler" />
+	</type>
 </config>

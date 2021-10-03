@@ -5,20 +5,39 @@
 	<preference for="Magento\LayeredNavigation\Block\Navigation\FilterRenderer"
 	            type="Eloom\ThemeFrontend\Block\Navigation\FilterRenderer"/>
 	
+	<type name="Magento\Framework\App\Router\NoRouteHandlerList">
+		<arguments>
+			<argument name="handlerClassesList" xsi:type="array">
+				<item name="helloworld" xsi:type="array">
+					<item name="class" xsi:type="string">Eloom\ThemeFrontend\App\Router\NoRouteHandler</item>
+					<item name="sortOrder" xsi:type="string">80</item>
+				</item>
+			</argument>
+		</arguments>
+	</type>
+	
 	<type name="Magento\Catalog\Block\Product\AbstractProduct">
-		<plugin name="badges_product" type="Eloom\ThemeFrontend\Plugin\Catalog\ProductPlugin"/>
+		<plugin name="badges_product"
+		        type="Eloom\ThemeFrontend\Plugin\Catalog\ProductPlugin"/>
 	</type>
+	
 	<type name="Magento\Catalog\Block\Product\Image">
-		<plugin name="badges_label" type="Eloom\ThemeFrontend\Plugin\Catalog\Product\ImagePlugin"/>
+		<plugin name="badges_label"
+		        type="Eloom\ThemeFrontend\Plugin\Catalog\Product\ImagePlugin"/>
 	</type>
+	
 	<type name="Magento\Swatches\Block\Product\Renderer\Listing\Configurable">
 		<plugin name="product_listing_hover_image"
 		        type="Eloom\ThemeFrontend\Plugin\Catalog\Product\Renderer\Listing\Configurable"/>
 	</type>
+	
 	<type name="Magento\Swatches\Helper\Data">
-		<plugin name="media_gallery_hover_image" type="Eloom\ThemeFrontend\Plugin\Catalog\Product\Swatches"/>
+		<plugin name="media_gallery_hover_image"
+		        type="Eloom\ThemeFrontend\Plugin\Catalog\Product\Swatches"/>
 	</type>
+	
 	<type name="Eloom\ThemeFrontend\Block\Navigation\FilterRenderer">
-		<plugin name="swatches_layered_renderer" type="Magento\Swatches\Model\Plugin\FilterRenderer" sortOrder="1"/>
+		<plugin name="swatches_layered_renderer"
+		        type="Magento\Swatches\Model\Plugin\FilterRenderer" sortOrder="1"/>
 	</type>
 </config>
