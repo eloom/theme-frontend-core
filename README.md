@@ -1,10 +1,6 @@
-# Temas para Magento 2
+# Temas para Magento
 
-O módulo Temas para o Magento 2 é de código aberto e está disponível no [GitHub](https://github.com/eloom/theme-frontend). O repositório [GitHub](https://github.com/eloom/theme-frontend) está conectado ao [Repman](https://app.repman.io/organization/eloom/package/41b6f90f-96ca-4ef7-a674-b7815cce5fa7/details) para que você possa incluí-lo facilmente em seu projeto através do [Composer](https://getcomposer.org/).
-
-!!! Recomendamos que você teste as soluções em um servidor de teste antes de instalá-lo em seu servidor de produção.
-
-Acesse a página do projeto [Temas para Magento 2](https://eloom.tech/) e tenha uma visão completa de todos os recursos que nossa integração oferece.
+Acesse a página do projeto [Temas para Magento 2](https://eloom.tech/store/) e tenha uma visão completa de todos os recursos que nossa integração oferece.
 
 ## Requisitos Técnicos
 
@@ -22,14 +18,11 @@ Acesse a página do projeto [Temas para Magento 2](https://eloom.tech/) e tenha 
 - labels de desconto nos produtos;
 - alternância de imagens nos produtos ao passar o mouse.
 
-## Guia de instalação
-
-Consulte a seção [Instalando o módulo](https://docs.eloom.tech/pt/theme#instalando-o-modulo) dos Temas no Magento 2.
-
 ## Links
 
 * [Web site](https://eloom.tech/)
-* [Documentação](https://docs.eloom.tech/theme)
+* [Documentação](https://docs.eloom.tech/store)
 * [Issue tracker](https://github.com/eloom/theme-frontend/issues)
-* [Composer](https://app.repman.io/organization/eloom/package/41b6f90f-96ca-4ef7-a674-b7815cce5fa7/details)
+* [Repman](https://app.repman.io/organization/eloom/package/25fb603f-97fe-4ebc-b642-953294314d35/details)
+* [Packagist](https://packagist.org/packages/eloom/theme-frontend)
 * [Código fonte](https://github.com/eloom/theme-frontend)
