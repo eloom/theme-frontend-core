@@ -15,7 +15,7 @@ $productId = $block->getProduct()->getId();
     },
     "#eloom-installments-container": {
         "Eloom_ThemeFrontend/js/catalog/badges/installments/product": {
-            "installments": <?= $block->getInstallmentsJsonConfig() ?>
+            "installments": <?= $block->getInstallmentsSerializedConfig() ?>
         }
     }
 }

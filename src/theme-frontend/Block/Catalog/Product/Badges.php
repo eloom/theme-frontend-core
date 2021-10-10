@@ -74,7 +74,7 @@ class Badges extends Template {
 	 *
 	 * @return string
 	 */
-	public function getDateJsonConfig() {
+	public function getDateSerializedConfig() {
 		return $this->jsonEncoder->encode([
 			'createdAt' => $this->product->getCreatedAt(),
 			'newsFromDate' => $this->product->getNewsFromDate(),
@@ -86,7 +86,7 @@ class Badges extends Template {
 		]);
 	}
 	
-	public function getInstallmentsJsonConfig() {
+	public function getInstallmentsSerializedConfig() {
 		$storeId = $this->storeManager->getStore()->getId();
 		$installments = [
 			'cc' => [

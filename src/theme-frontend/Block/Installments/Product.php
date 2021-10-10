@@ -59,7 +59,7 @@ class Product extends Template implements BlockInterface {
 	/**
 	 * @inheritdoc
 	 */
-	public function getInstallmentsJsonConfig() {
+	public function getInstallmentsSerializedConfig() {
 		$storeId = $this->storeManager->getStore()->getId();
 		
 		$data = ['cc' => [

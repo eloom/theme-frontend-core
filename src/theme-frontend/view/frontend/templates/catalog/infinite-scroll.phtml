@@ -1,5 +1,3 @@
-<?php /** @var $block \Eloom\ThemeFrontend\Block\InfinateScroll */?>
-
 <script id="infinite-scroll-status" type="text/x-magento-template">
     <div class="grid__col-sizer"></div>
     <div class="grid__gutter-sizer"></div>
@@ -19,8 +17,8 @@
 </script>
 <script type="text/x-magento-init">
     {
-        "<?php echo $block->getContainer(); ?>": {
-            "EloomInfiniteScroll": <?php echo $block->getSerializedConfig(); ?>
+        ".products.list.items.product-items": {
+            "EloomInfiniteScroll": {"config": {"hideNav": ".products.wrapper ~ .toolbar-products .pages"}, "settings": {"text": "<?= __('No more products')?>"}}
         }
     }
 </script>

@@ -76,7 +76,7 @@ class ImageHover extends Template {
 	 *
 	 * @return string
 	 */
-	public function getJsonConfig() {
+	public function getSerializedConfig() {
 		$baseHoverImage = $this->product->getData('hover_image');
 		$url = '';
 		if ($baseHoverImage) {

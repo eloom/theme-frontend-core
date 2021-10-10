@@ -8,7 +8,7 @@ $productId = $block->getProduct()->getId();
   {
       "[data-image-hover=product-id-<?= $block->escapeHtml($productId) ?>]": {
           "Eloom_ThemeFrontend/js/catalog/image-hover": {
-            "config": <?= $block->getJsonConfig() ?>
+            "config": <?= $block->getSerializedConfig() ?>
           }
       }
   }
