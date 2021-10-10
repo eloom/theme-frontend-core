@@ -14,7 +14,7 @@
 				<cc_min_installment>15.00</cc_min_installment>
 				<cc_installmens_without_interest>3</cc_installmens_without_interest>
 				<voucher_active>1</voucher_active>
-				<voucher_text><![CDATA[<span class="price">%1</span> com %2% off no boleto]]></voucher_text>
+				<voucher_text><![CDATA[ou <span class="price">%1</span> com %2% off no boleto]]></voucher_text>
 				<voucher_discount>5</voucher_discount>
 			</installments>
 		</eloom_themefrontend>

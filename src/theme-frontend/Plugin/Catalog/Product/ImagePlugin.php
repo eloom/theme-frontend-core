@@ -16,6 +16,7 @@ declare(strict_types=1);
 namespace Eloom\ThemeFrontend\Plugin\Catalog\Product;
 
 use Eloom\ThemeFrontend\Block\Catalog\Product\Badges;
+use Eloom\ThemeFrontend\Block\Catalog\ImageHover;
 use Magento\Catalog\Block\Product\Image;
 use Magento\Framework\View\LayoutInterface;
 
@@ -31,10 +32,21 @@ class ImagePlugin {
 	}
 	
 	public function afterToHtml(Image $image, $result) {
-		if ($image->getData('product') && $result) {
-			$block = $this->layout->createBlock(Badges::class)->setProduct($image->getData('product'))->setTemplate('Eloom_ThemeFrontend::catalog/badges.phtml');
+		$product = $image->getData('product');
+		if ($product && $result) {
+			$block = $this->layout
+				->createBlock(Badges::class)
+				->setProduct($product)
+				->setTemplate('Eloom_ThemeFrontend::catalog/badges.phtml');
 			
-			return $result . $block->toHtml();
+			$result .= $block->toHtml();
+			
+			$block = $this->layout
+				->createBlock(ImageHover::class)
+				->setProduct($product)
+				->setTemplate('Eloom_ThemeFrontend::catalog/image-hover.phtml');
+			
+			$result .= $block->toHtml();
 		}
 		
 		return $result;

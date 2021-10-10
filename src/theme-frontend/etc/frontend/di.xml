@@ -26,16 +26,6 @@
 		        type="Eloom\ThemeFrontend\Plugin\Catalog\Product\ImagePlugin"/>
 	</type>
 	
-	<type name="Magento\Swatches\Block\Product\Renderer\Listing\Configurable">
-		<plugin name="product_listing_hover_image"
-		        type="Eloom\ThemeFrontend\Plugin\Catalog\Product\Renderer\Listing\Configurable"/>
-	</type>
-	
-	<type name="Magento\Swatches\Helper\Data">
-		<plugin name="media_gallery_hover_image"
-		        type="Eloom\ThemeFrontend\Plugin\Catalog\Product\Swatches"/>
-	</type>
-	
 	<type name="Eloom\ThemeFrontend\Block\Navigation\FilterRenderer">
 		<plugin name="swatches_layered_renderer"
 		        type="Magento\Swatches\Model\Plugin\FilterRenderer" sortOrder="1"/>
