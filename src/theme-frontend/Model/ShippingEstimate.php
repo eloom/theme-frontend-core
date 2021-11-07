@@ -29,19 +29,19 @@ use Magento\Store\Model\StoreManagerInterface;
 class ShippingEstimate implements ShippingEstimateInterface {
 	
 	private $serializer;
-	
-	protected $objectManager;
+
+	private $objectManager;
 	
 	/**
 	 * @var ProductRepositoryInterface
 	 */
-	protected $productRepository;
-	
-	protected $directoryHelper;
-	
-	protected $pricingHelper;
-	
-	protected $cart;
+	private $productRepository;
+
+	private $directoryHelper;
+
+	private $pricingHelper;
+
+	private $cart;
 	
 	public function __construct(Json $serializer = null,
 	                            ProductRepositoryInterface $productRepository,

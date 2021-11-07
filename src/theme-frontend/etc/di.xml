@@ -21,4 +21,7 @@
 	
 	<preference for="Eloom\ThemeFrontend\Api\ShippingEstimateInterface"
 	            type="Eloom\ThemeFrontend\Model\ShippingEstimate"/>
+
+	<preference for="Eloom\ThemeFrontend\Api\CouponInterface"
+	            type="Eloom\ThemeFrontend\Model\Coupon"/>
 </config>

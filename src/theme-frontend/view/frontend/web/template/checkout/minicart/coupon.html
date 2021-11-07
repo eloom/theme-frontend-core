@@ -1,0 +1,42 @@
+<div class="extra block discount">
+    <span class="label">
+        <!-- ko i18n: 'Apply Discount Code' --><!-- /ko -->
+    </span>
+    <form class="form" method="POST">
+        <fieldset class="fieldset">
+            <div class="field coupon">
+                <div class="control">
+                    <input type="text"
+                           id="coupon_code"
+                           name="coupon_code"
+                           class="input-text"
+                           autocomplete="off"
+                           data-bind="attr: {'data-validate': JSON.stringify({'required':true})},
+                                      value: couponCode"/>
+                </div>
+            </div>
+            <div class="field button">
+                <!-- ko if: !hasValidCouponCode() -->
+                <button class="action apply" type="button" data-bind="event: {click: apply}">
+                    <span data-bind="i18n: 'Apply'"></span>
+                </button>
+                <!-- /ko -->
+                <!-- ko if: hasValidCouponCode() -->
+                <button type="button" class="action cancel" data-bind="event: {click: cancel}">
+                    <span data-bind="i18n: 'Cancel'"></span>
+                </button>
+                <!-- /ko -->
+            </div>
+        </fieldset>
+    </form>
+
+    <div class="table-wrapper">
+        <span data-bind="text: message"></span>
+        <table class="data table totals">
+            <tr class="totals" data-bind="foreach: totals">
+                <td class="mark"><span data-bind="text: title"></span></td>
+                <td class="amount" data-bind="html: value"></td>
+            </tr>
+        </table>
+    </div>
+</div>
