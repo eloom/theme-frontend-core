@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+	<table name="eloom_brand" resource="default" engine="innodb" comment="Brands">
+		<column xsi:type="smallint" name="entity_id" padding="6" unsigned="true" nullable="false" identity="true"
+		        comment="Entity Id"/>
+		<constraint xsi:type="primary" referenceId="PRIMARY">
+			<column name="entity_id"/>
+		</constraint>
+		<column name="title" nullable="false" xsi:type="varchar" length="255"/>
+		<column name="urlkey" nullable="true" xsi:type="varchar" length="255"/>
+		<column name="meta_key" nullable="true" xsi:type="varchar" length="255"/>
+		<column name="meta_description" nullable="true" xsi:type="varchar" length="255"/>
+		<column name="option_id" nullable="true" xsi:type="varchar" length="255"/>
+		<column name="image" nullable="true" xsi:type="varchar" length="255"/>
+		<column name="product_ids" nullable="true" xsi:type="text"/>
+		<column name="stores" nullable="true" xsi:type="varchar" length="255"/>
+		<column name="description" nullable="true" xsi:type="varchar" length="255"/>
+		<column name="position" nullable="true" xsi:type="smallint" default="0"/>
+		<column name="status" nullable="true" xsi:type="smallint" default="1"/>
+	</table>
+</schema>

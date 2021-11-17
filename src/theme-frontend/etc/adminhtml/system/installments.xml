@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <include xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_include.xsd">
-	
+
 	<field id="configuration_details" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1"
 	       showInStore="0">
 		<label>Configuration Details</label>
 		<comment>https://docs.eloom.dev/theme/installments</comment>
 		<frontend_model>Eloom\ThemeFrontend\Block\Adminhtml\Config\Fieldset\Installments\Hint</frontend_model>
 	</field>
-	
+
 	<field id="cc" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1"
 	       showInStore="0">
 		<label><![CDATA[CC Settings]]></label>
@@ -42,7 +42,7 @@
 		</depends>
 		<validate>required-entry validate-number</validate>
 	</field>
-	
+
 	<field id="voucher" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1"
 	       showInStore="0">
 		<label><![CDATA[Voucher Settings]]></label>

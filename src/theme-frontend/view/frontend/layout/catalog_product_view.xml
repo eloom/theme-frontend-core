@@ -2,18 +2,26 @@
 <page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
 	<body>
+		<referenceContainer name="page.main.title">
+			<block class="Eloom\ThemeFrontend\Block\Catalog\Product\Brand"
+			       ifconfig="eloom_themefrontend/brand/active"
+			       name="product.info.brand"
+			       after="page.title"
+			       template="Eloom_ThemeFrontend::catalog/product/brand.phtml"/>
+		</referenceContainer>
+
 		<referenceContainer name="product.info.main">
 			<block class="Eloom\ThemeFrontend\Block\Catalog\Product\ShippingEstimate"
 			       name="catalog.shipping.estimate"
 			       template="Eloom_ThemeFrontend::catalog/product/shipping-estimate.phtml"
 			       before="product.info"/>
-			
+
 			<block class="Eloom\ThemeFrontend\Block\Catalog\Product\Measure"
 			       name="catalog.measure"
 			       template="Eloom_ThemeFrontend::catalog/product/measure.phtml"
 			       before="product.info"/>
 		</referenceContainer>
-		
+
 		<referenceContainer name="product.info.price">
 			<block class="Eloom\ThemeFrontend\Block\Installments\Product"
 			       template="Eloom_ThemeFrontend::catalog/product/badges.phtml"

@@ -1,0 +1,77 @@
+<?php
+/** @var $block Eloom\ThemeFrontend\Block\Brand\ListBrand */
+$alias = 'content-'.uniqid();
+$brands = $block->getBrands();
+$keyword = $this->getRequest()->getParam('keyword');
+?>
+<?php echo $block->getChildHtml('brand_filter_by_character'); ?>
+<div class="brand brand-content" >
+    <div class="block block-search brand-search">
+        <form class="form minisearch form-search brand-form-search" id="brand_search_mini_form" action="<?php echo $this->helper->getUrlRouter() ?>" method="get">
+            <div class="field search">
+                <div class="control-search">
+                    <input class ="keyword" type="text" name="keyword" placeholder="<?php echo __('Search a brand') ?>" value="<?php echo $block->escapeHtml($keyword) ?>"/>
+                </div>
+                <div class="actions">
+                    <button type="submit" title="<?php echo __('Search') ?>" class="action search">
+                        <span><?php echo __('Search') ?></span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+<?php if(!$brands->count()) : ?>
+    <div class="message info empty"><div><?= $block->escapeHtml(__('We can\'t find brands matching the selection')) ?></div></div>
+<?php return;?>
+<?php endif;?>
+    <div class="block-content">
+        <div id="<?php echo $alias; ?>" class="owl-carousel owl-theme">
+        <?php foreach ($brands as $brand) : ?>
+            <?php $href = $this->helper->getLink($brand); ?>
+            <div class="item">
+                <div class="image">
+                    <a href="<?= $href ?>">
+                        <img src="<?= $this->helper->getMediaUrl($brand->getImage()) ?>" alt="<?= $brand->getName(); ?>"/>
+                    </a>
+                </div>
+                <div class="name">
+                    <a class="link-brand" href="<?= $href ?>"><?= $brand->getTitle(); ?></a>
+                </div>
+            </div>
+        <?php endforeach; ?>
+        </div> 
+    </div>
+</div>
+<script type="text/x-magento-init">
+    {
+        "<?php echo "#{$alias}"?>": {
+            "EloomOwlCarousel": {
+                "autoplay": true,
+                "autoplayTimeout": 3000,
+                "autoplayHoverPause": true,
+                "loop": true,
+                "margin": 10,
+                "rewindNav": true,
+                "navText": ["", ""],
+                "animateOut": "fadeOut",
+                "responsive": {
+                    "0": {
+                        "items": 3,
+                        "nav": true,
+                        "dots": true
+                    },
+                    "600": {
+                        "items": 6,
+                        "nav": true,
+                        "dots": true
+                    },
+                    "1000": {
+                        "items": 8,
+                        "nav": true,
+                        "dots": true
+                    }
+                }
+            }
+        }
+    }
+	</script>

@@ -18,6 +18,7 @@ namespace Eloom\ThemeFrontend\Helper;
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\App\Helper\Context;
 use Magento\Store\Model\ScopeInterface;
+use Magento\Store\Model\StoreManagerInterface;
 
 class Data extends \Magento\Framework\App\Helper\AbstractHelper {
 
@@ -38,8 +39,14 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper {
 	const XML_PATH_AUTO_RELATED_LIMIT = 'eloom_themefrontend/auto_related/limit';
 	const XML_PATH_AUTO_RELATED_CACHE_LIFETIME = 'eloom_themefrontend/auto_related/cache_lifetime';
 
-	public function __construct(Context $context, ScopeConfigInterface $scopeConfig) {
+	private $storeManager;
+
+	public function __construct(Context               $context,
+	                            ScopeConfigInterface  $scopeConfig,
+	                            StoreManagerInterface $storeManager) {
 		$this->scopeConfig = $scopeConfig;
+		$this->storeManager = $storeManager;
+
 		parent::__construct($context);
 	}
 

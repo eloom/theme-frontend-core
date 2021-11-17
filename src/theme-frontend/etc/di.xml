@@ -4,21 +4,21 @@
 
 	<type name="Magento\Framework\App\Http">
 		<plugin name="maintenance_page"
-				type="Eloom\ThemeFrontend\App\MaintenanceHandler" />
+		        type="Eloom\ThemeFrontend\App\MaintenanceHandler"/>
 	</type>
 
 	<preference for="Magento\Catalog\Block\Product\ProductList\Related"
-				type="Eloom\ThemeFrontend\Block\Catalog\Product\ProductList\Related" />
+	            type="Eloom\ThemeFrontend\Block\Catalog\Product\ProductList\Related"/>
 
 	<preference for="Eloom\ThemeFrontend\Api\Data\AddressInterface"
 	            type="Eloom\ThemeFrontend\Model\Address"/>
-	
+
 	<preference for="Magento\Framework\App\Arguments\ValidationState"
 	            type="Eloom\ThemeFrontend\Model\ValidationState"/>
-	
+
 	<preference for="Eloom\ThemeFrontend\Api\MeasureInterface"
 	            type="Eloom\ThemeFrontend\Model\Measure"/>
-	
+
 	<preference for="Eloom\ThemeFrontend\Api\ShippingEstimateInterface"
 	            type="Eloom\ThemeFrontend\Model\ShippingEstimate"/>
 
