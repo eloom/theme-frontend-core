@@ -26,9 +26,9 @@
   "require": {
     "php": "~7.3|~7.4",
     "magento/framework": "103.0.*",
-    "eloom/module-checkout": "1.0.*",
-    "eloom/module-widgets": "1.0.*",
-    "eloom/module-dynamic-widgets": "1.0.*"
+    "eloom/module-checkout": "dev-main",
+    "eloom/module-widgets": "dev-main",
+    "eloom/module-dynamic-widgets": "dev-main"
   },
   "license": [
     "OSL-3.0",
