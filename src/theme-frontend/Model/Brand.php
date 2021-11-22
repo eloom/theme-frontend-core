@@ -46,6 +46,15 @@ class Brand extends AbstractModel {
 
 	protected $brandCollectionFactory;
 
+	/**
+	 * Constructor
+	 *
+	 * @return void
+	 */
+	protected function _construct() {
+		$this->_init('Eloom\ThemeFrontend\Model\ResourceModel\Brand');
+	}
+
 	public function __construct(Context                                                          $context,
 	                            Registry                                                         $registry,
 	                            ScopeConfigInterface                                             $scopeConfig,
@@ -61,16 +70,6 @@ class Brand extends AbstractModel {
 		$this->catalogProductVisibility = $catalogProductVisibility;
 		$this->helper = $helper;
 		$this->brandCollectionFactory = $brandCollectionFactory;
-	}
-
-	/**
-	 * Constructor
-	 *
-	 * @return void
-	 */
-	protected function _construct() {
-		parent::_construct();
-		$this->_init('Eloom\ThemeFrontend\Model\ResourceModel\Brand');
 	}
 
 	/**

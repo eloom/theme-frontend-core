@@ -34,13 +34,6 @@ use Magento\Store\Model\StoreManagerInterface;
 class ListProduct extends \Magento\Catalog\Block\Product\ListProduct {
 
 	/**
-	 * Product collection model
-	 *
-	 * @var Collection
-	 */
-	protected $productCollection;
-
-	/**
 	 * Catalog Layer
 	 *
 	 * @var Resolver
@@ -144,26 +137,26 @@ class ListProduct extends \Magento\Catalog\Block\Product\ListProduct {
 	}
 
 	protected function _getProductCollection() {
-		if (is_null($this->productCollection)) {
+		if (is_null($this->_productCollection)) {
 			$brand = $this->getType()->getData('option_id');
-			$collection = $this->getBrandProducts($brand);
+			$collection = $this->initializeProductCollection($brand);
 
 			if ($this->stockConfig->isShowOutOfStock() != 1) {
 				$this->stockFilter->addInStockFilterToCollection($collection);
 			}
 
-			$this->productCollection = $collection;
+			$this->_productCollection = $collection;
 		}
 		$page = $this->getRequest()->getParam('p', 1);
 
-		return $this->productCollection->setCurPage($page);
+		return $this->_productCollection->setCurPage($page);
 	}
 
-	public function getBrandProducts($brand) {
+	private function initializeProductCollection($brand) {
 		$attributeCode = $this->helper->getAttributeCode();
-		$collection = $this->productCollectionFactory->create();
-		$collection->setVisibility($this->catalogProductVisibility->getVisibleInCatalogIds());
-		$collection->addAttributeToFilter($attributeCode, $brand)
+		$collection = $this->productCollectionFactory->create()
+			->addAttributeToFilter($attributeCode, $brand)
+			->setVisibility($this->catalogProductVisibility->getVisibleInCatalogIds())
 			->addStoreFilter()
 			->addAttributeToSelect('*')
 			->addMinimalPrice()
