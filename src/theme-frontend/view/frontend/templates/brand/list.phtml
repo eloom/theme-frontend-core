@@ -5,7 +5,7 @@ $brands = $block->getBrands();
 $keyword = $this->getRequest()->getParam('keyword');
 ?>
 <?php echo $block->getChildHtml('brand_filter_by_character'); ?>
-<div class="page-products brand brand-content">
+<div class="brand brand-content">
     <div class="block block-search brand-search">
         <form class="form minisearch form-search brand-form-search" id="brand_search_mini_form" action="<?php echo $this->helper->getUrlRouter() ?>" method="get">
             <div class="field search">
@@ -31,11 +31,8 @@ $keyword = $this->getRequest()->getParam('keyword');
             <li class="item product product-item">
                 <div class="product-item-info">
                     <a class="product photo product-item-photo" href="<?= $href ?>">
-                        <span class="product-image-container">
-                            <span class="product-image-wrapper" style="overflow: unset;">
-                                <img class="product-image-photo" src="<?= $this->helper->getMediaUrl($brand->getImage()) ?>" alt="<?= $brand->getName(); ?>"/>
-                            </span>
-                        </span>
+                        <img src="<?= $this->helper->getMediaUrl($brand->getImage()) ?>"
+                             alt="<?= $brand->getName(); ?>"/>
                     </a>
                 </div>
                 <div class="product details product-item-details">
