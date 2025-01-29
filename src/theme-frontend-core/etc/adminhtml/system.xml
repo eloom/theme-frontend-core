@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<section id="eloom_themefrontend" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1"
+		         showInStore="1">
+			<class>separator-top</class>
+			<label>Themes</label>
+			<tab>eloom</tab>
+			<resource>Eloom_ThemeFrontendCore::config</resource>
+
+			<group id="information" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="0">
+				<label>Information</label>
+
+				<field id="version" translate="label" type="label" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="0">
+					<label>Installed version</label>
+					<frontend_model>Eloom\ThemeFrontendCore\Block\Adminhtml\System\Config\InstalledVersion</frontend_model>
+				</field>
+
+				<field id="docs" translate="label" type="label" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="0">
+					<label>Documentation</label>
+					<frontend_model>Eloom\ThemeFrontendCore\Block\Adminhtml\System\Config\Documentation</frontend_model>
+				</field>
+			</group>
+
+			<group id="cookie_notice" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1"
+			       showInStore="1">
+				<label>Cookie Notice</label>
+				<include path="Eloom_ThemeFrontendCore::system/cookie-notice.xml"/>
+			</group>
+
+			<group id="installments" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1"
+			       showInStore="1">
+				<label>Product Installments</label>
+				<include path="Eloom_ThemeFrontendCore::system/installments.xml"/>
+			</group>
+
+			<group id="brand" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1"
+			       showInStore="1">
+				<label>Brands</label>
+				<include path="Eloom_ThemeFrontendCore::system/brand.xml"/>
+			</group>
+		</section>
+	</system>
+</config>

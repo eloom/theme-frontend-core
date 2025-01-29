@@ -1,0 +1,13 @@
+<div class="links">
+	<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer_links_block')->toHtml(); ?>
+</div>
+
+<span data-footer-menu="footer-menu"></span>
+
+<script type="text/x-magento-init">
+  {
+      "[data-footer-menu=footer-menu]": {
+          "Eloom_ThemeFrontendCore/js/theme/footer-link": {}
+      }
+  }
+</script>

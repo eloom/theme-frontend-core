@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<body>
+		<referenceContainer name="footer">
+			<block class="Magento\Framework\View\Element\Template"
+			       name="eloom.footer.links"
+			       template="Eloom_ThemeFrontendCore::html/footer-links.phtml"/>
+			
+			<block class="Magento\Framework\View\Element\Template"
+			       name="eloom.footer.payment.logos"
+			       template="Eloom_ThemeFrontendCore::html/payment-logos.phtml"/>
+			
+			<block class="Magento\Framework\View\Element\Template"
+			       name="eloom.footer.security.logos"
+			       template="Eloom_ThemeFrontendCore::html/security-logos.phtml"/>
+			
+			<block class="Magento\Framework\View\Element\Template"
+			       name="eloom.footer.platform.logos"
+			       template="Eloom_ThemeFrontendCore::html/platform-logos.phtml"/>
+		</referenceContainer>
+		
+		<referenceContainer name="before.body.end">
+			<block class="Eloom\ThemeFrontendCore\Block\Theme\Preferences"
+			       name="eloom_theme_preferences"
+			       template="Eloom_ThemeFrontendCore::theme/preferences.phtml"
+			       after="eloom_core_template"/>
+			
+			<block class="Eloom\ThemeFrontendCore\Block\Theme\CookieNotice"
+			       name="cookie.notice"
+			       template="Eloom_ThemeFrontendCore::theme/cookie-notice.phtml"/>
+		</referenceContainer>
+	</body>
+</page>

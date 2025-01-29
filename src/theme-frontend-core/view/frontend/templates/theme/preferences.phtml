@@ -1,0 +1,6 @@
+<?php /** @var $block \Eloom\ThemeFrontendCore\Block\Theme\Preferences */?>
+<script>
+	window.eloom = window.eloom || {};
+	window.eloom.theme = window.eloom.theme || {};
+	window.eloom.theme = <?php echo $block->getSerializedConfig() ?>;
+</script>

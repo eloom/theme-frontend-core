@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+	<type name="Magento\Framework\App\Http">
+		<plugin name="maintenance_page"
+		        type="Eloom\ThemeFrontendCore\App\MaintenanceHandler"/>
+	</type>
+
+	<preference for="Magento\Catalog\Block\Product\ProductList\Related"
+	            type="Eloom\ThemeFrontendCore\Block\Catalog\Product\ProductList\Related"/>
+
+	<preference for="Eloom\ThemeFrontendCore\Api\Data\AddressInterface"
+	            type="Eloom\ThemeFrontendCore\Model\Address"/>
+
+	<preference for="Magento\Framework\App\Arguments\ValidationState"
+	            type="Eloom\ThemeFrontendCore\Model\ValidationState"/>
+
+	<preference for="Eloom\ThemeFrontendCore\Api\MeasureInterface"
+	            type="Eloom\ThemeFrontendCore\Model\Measure"/>
+
+	<preference for="Eloom\ThemeFrontendCore\Api\ShippingEstimateInterface"
+	            type="Eloom\ThemeFrontendCore\Model\ShippingEstimate"/>
+
+	<preference for="Eloom\ThemeFrontendCore\Api\CouponInterface"
+	            type="Eloom\ThemeFrontendCore\Model\Coupon"/>
+</config>

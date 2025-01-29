@@ -1,0 +1,14 @@
+<?php /* @var $block \Eloom\ThemeFrontendCore\Block\Theme\CookieNotice */?>
+
+<div id="cookie-notice-container"
+     class='widget-cookie-message' data-bind="scope:'cookie-notice'">
+	<!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+
+<script type="text/x-magento-init">
+{
+    "#cookie-notice-container": {
+        "Magento_Ui/js/core/app": <?= $block->getJsLayout() ?>
+    }
+}
+</script>

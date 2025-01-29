@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+
+	<route url="/V1/eloom/theme/measure" method="POST">
+		<service class="Eloom\ThemeFrontendCore\Api\MeasureInterface"
+		         method="getContent"/>
+		<resources>
+			<resource ref="anonymous"/>
+		</resources>
+	</route>
+
+	<route url="/V1/eloom/theme/shippingEstimate" method="POST">
+		<service class="Eloom\ThemeFrontendCore\Api\ShippingEstimateInterface"
+		         method="estimateByAddress"/>
+		<resources>
+			<resource ref="anonymous"/>
+		</resources>
+	</route>
+
+	<route url="/V1/eloom/theme/coupon" method="POST">
+		<service class="Eloom\ThemeFrontendCore\Api\CouponInterface"
+		         method="apply"/>
+		<resources>
+			<resource ref="anonymous"/>
+		</resources>
+	</route>
+
+	<route url="/V1/eloom/theme/discount" method="POST">
+		<service class="Eloom\ThemeFrontendCore\Api\CouponInterface"
+		         method="getDiscount"/>
+		<resources>
+			<resource ref="anonymous"/>
+		</resources>
+	</route>
+</routes>

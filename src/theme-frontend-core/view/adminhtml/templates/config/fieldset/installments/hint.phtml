@@ -1,0 +1,13 @@
+<?php
+/**
+ * @var \Eloom\ThemeFrontendCore\Block\Adminhtml\Config\Fieldset\Installments\Hint $block
+ */
+$helpLink = $block->escapeUrl($block->getHelpLink());
+?>
+<?php if ($helpLink) : ?>
+    <div class="eloom-installments">
+        <?= $block->escapeHtml(__('Not sure what installments to use? Click ')) ?>
+        <a href="<?php echo $helpLink; ?>" target="_blank"><?= $block->escapeHtml(__('here')) ?></a>
+        <?= $block->escapeHtml(__(' to learn more.')) ?>
+    </div>
+<?php endif; ?>

@@ -5,9 +5,9 @@ Acesse a página do projeto [Temas para Magento 2](https://eloom.tech/store/) e 
 ## Requisitos Técnicos
 
 | Requisito | Versão |
-| ------ | ----------- |
-| Magento Open Source, Adobe Commerce | >= 2.4.x |
-| PHP, PHP-FPM | 7.3, 7.4 |
+| ------ |------|
+| Magento Open Source, Adobe Commerce | >= 2.4.7.x |
+| PHP, PHP-FPM | 8.3  |
 
 ## Recursos e Funcionalidades
 
@@ -22,7 +22,7 @@ Acesse a página do projeto [Temas para Magento 2](https://eloom.tech/store/) e 
 
 * [Web site](https://eloom.tech/)
 * [Documentação](https://docs.eloom.tech/store)
-* [Issue tracker](https://github.com/eloom/theme-frontend/issues)
+* [Issue tracker](https://github.com/eloom/theme-frontend-core/issues)
 * [Repman](https://app.repman.io/organization/eloom/package/25fb603f-97fe-4ebc-b642-953294314d35/details)
-* [Packagist](https://packagist.org/packages/eloom/theme-frontend)
-* [Código fonte](https://github.com/eloom/theme-frontend)
+* [Packagist](https://packagist.org/packages/eloom/theme-frontend-core)
+* [Código fonte](https://github.com/eloom/theme-frontend-core)

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="Eloom_ThemeFrontendCore::config"
+		     title="Themes"
+		     module="Eloom_ThemeFrontendCore"
+		     action="adminhtml/system_config/edit/section/eloom_themefrontend"
+		     parent="Eloom_Core::menu"
+		     resource="Magento_Backend::content"
+		     sortOrder="10"/>
+
+		<add id="Eloom_ThemeFrontendCore::brand"
+		     title="Brands"
+		     module="Eloom_ThemeFrontendCore"
+		     action="eloomtheme/brand/index"
+		     parent="Eloom_Core::menu"
+		     resource="Magento_Backend::content"
+		     sortOrder="11"/>
+	</menu>
+</config>
