@@ -5,7 +5,7 @@
 * 
 * @category     elOOm
 * @package      Modulo Theme
-* @copyright    Copyright (c) 2025 Ã©lOOm (https://eloom.com.br)
+* @copyright    Copyright (c) 2025 elOOm (https://eloom.com.br)
 * @version      1.0.0
 * @license      https://opensource.org/licenses/OSL-3.0
 * @license      https://opensource.org/licenses/AFL-3.0
@@ -58,9 +58,9 @@ class Related extends \Magento\Catalog\Block\Product\ProductList\Related {
 	                            Visibility $catalogProductVisibility,
 	                            Session    $checkoutSession,
 	                            Manager    $moduleManager,
-	                            array      $data = [],
 	                            Helper     $helper,
-	                            Collection $collection) {
+	                            Collection $collection,
+	                            array      $data = []) {
 		$this->helper = $helper;
 		$this->registry = $context->getRegistry();
 		$this->storeManager = $context->getStoreManager();;
