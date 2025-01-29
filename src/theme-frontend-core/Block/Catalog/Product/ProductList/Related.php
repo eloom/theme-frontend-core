@@ -85,13 +85,13 @@ class Related extends \Magento\Catalog\Block\Product\ProductList\Related {
 		}
 	}
 
-	protected function _cacheKey() {
+	protected function _cacheKey(): string | null {
 		$product = $this->registry->registry('product');
 		if ($product) {
-			return get_class() . '::' . $this->storeManager->getStore()->getCode() . '::' . $product->getId();
+			//return get_class($this) . '::' . $this->storeManager->getStore()->getCode() . '::' . $product->getId();
 		}
 
-		return false;
+		return null;
 	}
 
 	protected function _prepareData() {

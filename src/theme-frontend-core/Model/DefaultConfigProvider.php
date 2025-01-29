@@ -36,8 +36,10 @@ class DefaultConfigProvider {
 	}
 	
 	public function getConfig() {
-		$storeId = $this->storeManager->getStore()->getId();
-		
-		return [];
+		return [
+			'theme' => [
+				'storeId' => $this->storeManager->getStore()->getId()
+			]
+		];
 	}
 }

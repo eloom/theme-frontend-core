@@ -3,7 +3,7 @@ define([
 		'jquery',
 		'ko',
 		'mage/storage',
-		'Eloom_Core/js/model/url-builder'],
+		'Magento_Checkout/js/model/url-builder'],
 	function (Component,
 	          $,
 	          ko,
