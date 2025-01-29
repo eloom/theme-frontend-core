@@ -21,7 +21,7 @@ Acesse a página do projeto [Temas para Magento 2](https://eloom.tech/store/) e 
 ## Links
 
 * [Web site](https://eloom.tech/)
-* [Documentação](https://docs.eloom.tech/store)
+* [Documentação](https://docs.eloom.com.br/store)
 * [Issue tracker](https://github.com/eloom/theme-frontend-core/issues)
 * [Repman](https://app.repman.io/organization/eloom/package/25fb603f-97fe-4ebc-b642-953294314d35/details)
 * [Packagist](https://packagist.org/packages/eloom/theme-frontend-core)

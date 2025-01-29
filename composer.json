@@ -1,5 +1,5 @@
 {
-  "name": "eloom/theme-frontend-core-core",
+  "name": "eloom/theme-frontend-core",
   "description": "Tema Core para Magento",
   "homepage": "https://eloom.com.br/",
   "keywords": [
@@ -34,10 +34,10 @@
   ],
   "autoload": {
     "files": [
-      "src/theme-frontend-core-core/registration.php"
+      "src/theme-frontend-core/registration.php"
     ],
     "psr-4": {
-      "Eloom\\ThemeFrontendCore\\": "src/theme-frontend-core-core"
+      "Eloom\\ThemeFrontendCore\\": "src/theme-frontend-core"
     }
   }
 }

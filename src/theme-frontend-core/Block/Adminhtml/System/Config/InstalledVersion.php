@@ -30,6 +30,6 @@ class InstalledVersion extends Field {
 		
 		$element->setValue($dbVersion);
 		
-		return '<strong>' . $element->getEscapedValue() . '</strong> - [<a href="https://github.com/eloom/theme-frontend-core-core/releases" target="_blank">' . __('Releases') . '</a>]';
+		return '<strong>' . $element->getEscapedValue() . '</strong> - [<a href="https://github.com/eloom/theme-frontend-core/releases" target="_blank">' . __('Releases') . '</a>]';
 	}
 }
