@@ -3,12 +3,12 @@ define([
 		'jquery',
 		'ko',
 		'mage/storage',
-		'Magento_Checkout/js/model/url-builder'],
+		'Eloom_Core/js/model/url-builder'],
 	function (Component,
 	          $,
 	          ko,
 	          storage,
-	          urlBuilder) {
+			  urlBuilder) {
 		'use strict';
 
 		let isComplete = $.Deferred();

@@ -2,6 +2,7 @@
 /** @var $block Eloom\ThemeFrontendCore\Block\Catalog\Product\ShippingEstimate */
 ?>
 <div id="eloom-shipping-estimate" data-mage-init='{
+    "scope": "shipping-estimate",
     "collapsible":{
         "openedState": "active", "collapsible": true, "active": true,
         "animate":{ "duration" :1000, "easing":"easeOutCubic"}
@@ -21,8 +22,14 @@
 
 <script type="text/x-magento-init">
   {
-      "[data-eloom-shipping-estimate]": {
-          "Magento_Ui/js/core/app": <?= $block->getJsLayout() ?>
-      }
+    "*": {
+        "Magento_Ui/js/core/app": {
+            "components": {
+                    "shipping-estimate": {
+                        "component": "Eloom_ThemeFrontendCore/js/catalog/product/shipping-estimate"
+                    }
+                }
+            }
+        }
   }
 </script>

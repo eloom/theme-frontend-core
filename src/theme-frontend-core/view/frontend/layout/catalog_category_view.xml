@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left"
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
-	<body>
-		<referenceContainer name="before.body.end">
-			<block class="Magento\Framework\View\Element\Template"
-			       name="eloom.infinite.scroll"
-			       template="Eloom_ThemeFrontendCore::catalog/infinite-scroll.phtml"
-			       after="category.products"/>
-		</referenceContainer>
-	</body>
+    <body>
+        <referenceContainer name="category.products.list">
+            <block class="Eloom\ThemeFrontendCore\Block\Installments\Product"
+                   template="Eloom_ThemeFrontendCore::catalog/product/badges.phtml"
+                   name="installments.product"
+                   after="category.product.list.additional"/>
+        </referenceContainer>
+    </body>
 </page>

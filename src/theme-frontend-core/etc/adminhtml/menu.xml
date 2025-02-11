@@ -8,13 +8,5 @@
 		     parent="Eloom_Core::menu"
 		     resource="Magento_Backend::content"
 		     sortOrder="10"/>
-
-		<add id="Eloom_ThemeFrontendCore::brand"
-		     title="Brands"
-		     module="Eloom_ThemeFrontendCore"
-		     action="eloomtheme/brand/index"
-		     parent="Eloom_Core::menu"
-		     resource="Magento_Backend::content"
-		     sortOrder="11"/>
 	</menu>
 </config>

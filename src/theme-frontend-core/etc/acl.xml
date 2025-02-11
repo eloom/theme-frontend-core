@@ -7,7 +7,6 @@
 					<resource id="Magento_Backend::stores_settings">
 						<resource id="Magento_Config::config">
 							<resource id="Eloom_ThemeFrontendCore::config" title="Themes" sortOrder="1"/>
-							<resource id="Eloom_ThemeFrontendCore::brand" title="Brand" sortOrder="2"/>
 						</resource>
 					</resource>
 				</resource>

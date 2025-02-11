@@ -30,9 +30,11 @@ class ShippingEstimate extends Template implements BlockInterface {
 	/**
 	 * @inheritdoc
 	 */
+	/*
 	public function getJsLayout() {
-		$this->jsLayout['components']['shipping-estimate']['component'] = 'Eloom_ThemeFrontendCore/js/catalog/product/shipping-estimate';
+		$this->jsLayout['components']['shipping-estimate']['config'] = 'Eloom_ThemeFrontendCore/js/catalog/product/shipping-estimate';
 		
 		return parent::getJsLayout();
 	}
+	*/
 }

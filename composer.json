@@ -22,11 +22,11 @@
     "email": "contato@eloom.com.br"
   },
   "minimum-stability": "dev",
-  "prefer-stable" : true,
+  "prefer-stable": true,
   "require": {
     "php": "~8.3",
     "magento/framework": "103.0.*",
-    "eloom/module-checkout": "dev-main"
+    "eloom/module-core": "dev-main"
   },
   "license": [
     "OSL-3.0",

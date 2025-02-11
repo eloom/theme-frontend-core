@@ -17,7 +17,7 @@
 				<cc_min_installment>15.00</cc_min_installment>
 				<cc_installmens_without_interest>3</cc_installmens_without_interest>
 				<voucher_active>1</voucher_active>
-				<voucher_text><![CDATA[ou <span class="price">%1</span> com %2% off no boleto]]></voucher_text>
+				<voucher_text><![CDATA[<span class="price">%1</span> com %2% off no pix/boleto]]></voucher_text>
 				<voucher_discount>5</voucher_discount>
 			</installments>
 			<auto_related>
@@ -25,15 +25,6 @@
 				<limit>4</limit>
 				<cache_lifetime>84600</cache_lifetime>
 			</auto_related>
-			<brand>
-				<active>1</active>
-				<title>Brands</title>
-				<top_menu_active>1</top_menu_active>
-				<router>brand</router>
-				<url_suffix>.html</url_suffix>
-				<attribute>manufacturer</attribute>
-				<link>0</link>
-			</brand>
 		</eloom_themefrontend>
 	</default>
 </config>

@@ -34,12 +34,6 @@
 				<label>Product Installments</label>
 				<include path="Eloom_ThemeFrontendCore::system/installments.xml"/>
 			</group>
-
-			<group id="brand" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1"
-			       showInStore="1">
-				<label>Brands</label>
-				<include path="Eloom_ThemeFrontendCore::system/brand.xml"/>
-			</group>
 		</section>
 	</system>
 </config>
